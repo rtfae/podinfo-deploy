@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: wego-kind-kind-podinfo-deploy
+  namespace: wego-system
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  secretRef:
+    name: wego-kind-kind-podinfo-deploy
+  url: ssh://git@github.com/sympatheticmoose/podinfo-deploy.git
+
