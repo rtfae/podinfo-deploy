@@ -1,0 +1,15 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    wego.weave.works/app-identifier: wego-09d37414296faadb8be8285c9f2aecac
+  name: teste2
+  namespace: wego-system
+spec:
+  branch: main
+  config_url: ssh://git@github.com/rtfae/podinfo-deploy.git
+  deployment_type: kustomize
+  path: git@github.com:rtfae/demoweave.git
+  source_type: git
+  url: ssh://git@github.com/rtfae/podinfo-deploy.git
